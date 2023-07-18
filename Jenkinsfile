@@ -10,7 +10,7 @@ stages {
             steps {
                 script {
                 sh '''
-                 sudo chmod 644 /etc/rancher/k3s/k3s.yaml
+                 sudo chmod 644 /etc/rancher/k3s/k3s.yaml 
 
                  sleep 3
                 '''
