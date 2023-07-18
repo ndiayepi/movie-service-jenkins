@@ -31,7 +31,7 @@ spec:
         - name: movie-service
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository2 }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           command: ['sh', '-c', 'echo The app is running! && sleep 5600']
           command: ["uvicorn"]
           args: ["app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
